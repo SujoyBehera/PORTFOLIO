@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUJOY BEHERA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f7;
+      color: #2d2d2d;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    a { color: #4a7c59; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+
+    header .name {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #2d2d2d;
+    }
+
+    header nav { display: flex; gap: 24px; }
+    header nav a { color: #666; font-size: 0.9rem; }
+    header nav a:hover { color: #4a7c59; text-decoration: none; }
+
+  
+    .wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+   
+    .intro {
+      padding: 80px 0 60px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .intro-tag {
+      display: inline-block;
+      background: #eef5f1;
+      color: #4a7c59;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .intro h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+
+    .intro p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 540px;
+      margin-bottom: 30px;
+    }
+
+    .intro-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; text-decoration: none; }
+
+    .btn-green  { background: #4a7c59; color: white; }
+    .btn-border { border: 1.5px solid #ddd; color: #444; background: white; }
+
+    
+    section { padding: 60px 0; border-bottom: 1px solid #eee; }
+    section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+    }
+
+    p { color: #555; margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── SKILLS ── */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background: white;
+      border: 1.5px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      color: #444;
+    }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: #fffbf0;
+      border: 1px solid #f0dfa0;
+      border-radius: 10px;
+      padding: 18px 22px;
+      font-size: 0.9rem;
+      color: #7a6020;
+      margin-top: 24px;
+    }
+
+    /* ── PROJECT CARDS ── */
+    .card {
+      background: white;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 16px;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+
+    .card h3 { font-size: 1.05rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; }
+    .card p  { font-size: 0.9rem; color: #666; margin-bottom: 14px; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .tag {
+      background: #f3f3f3;
+      color: #555;
+      border-radius: 6px;
+      padding: 3px 12px;
+      font-size: 0.78rem;
+    }
+
+    .card a { font-size: 0.85rem; color: #4a7c59; font-weight: 500; }
+
+    /* ── EDUCATION ── */
+    .edu-item { margin-bottom: 28px; }
+    .edu-item:last-child { margin-bottom: 0; }
+
+    .edu-item h3 { font-size: 1rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+    .edu-item p  { font-size: 0.9rem; color: #666; margin: 0; }
+    .edu-item .year { font-size: 0.8rem; color: #aaa; margin-bottom: 4px; }
+
+    /* ── CONTACT ── */
+    .contact-list { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: white;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-decoration: none;
+      color: #2d2d2d;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+    .contact-item:hover { border-color: #4a7c59; text-decoration: none; }
+    .contact-item span { font-size: 1.2rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.8rem;
+      color: #bbb;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      header { padding: 14px 20px; }
+      header nav { gap: 14px; }
+      .intro { padding: 60px 0 40px; }
+      .intro h1 { font-size: 1.8rem; }
+      section { padding: 44px 0; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="name">Sujoy Behera</span>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="wrap">
+
+    <!-- INTRO -->
+    <div class="intro">
+      <span class="intro-tag">Open to internships</span>
+      <h1>Hi, I'm Sujoy 👋</h1>
+      <p>
+        I'm a first-year CS student at SRM IST who started coding this year and got completely
+        hooked. I'm learning C++ and web development, and I love building small projects to
+        practise what I pick up.
+      </p>
+      <div class="intro-links">
+        <a href="#projects" class="btn btn-green">See my projects</a>
+        <a href="mailto:beherasujoy@gmail.com" class="btn btn-border">Email me</a>
+        <a href="https://github.com/SujoyBehera" target="_blank" class="btn btn-border">GitHub ↗</a>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <p class="section-label">About me</p>
+      <h2>A bit about me</h2>
+
+      <p>
+        I started college in 2025 with no coding experience at all. My first real introduction
+        to programming was C++ and I genuinely enjoyed it — I kept going past what the
+        syllabus asked for just because it was interesting.
+      </p>
+      <p>
+        Alongside C++ I've been learning HTML and CSS to understand how the web works.
+        I believe the best way to get good at something technical is to build things with it,
+        even when they're rough around the edges.
+      </p>
+      <p>
+        I'm actively looking for internship opportunities where I can learn from experienced
+        developers and contribute something useful.
+      </p>
+
+      <div class="skills">
+        <span class="skill">C++</span>
+        <span class="skill">OOP</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Problem Solving</span>
+        <span class="skill">Git</span>
+      </div>
+
+      <div class="callout">
+        🥈 Placed <strong>2nd</strong> in Campus Quest 4.0 — a coding competition at SRM IST —
+        during my very first semester.
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="section-label">Projects</p>
+      <h2>Things I've built</h2>
+
+      <div class="card">
+        <h3>Student Record System</h3>
+        <p>
+          A console app in C++ to manage student records — add, search, update, and delete
+          entries. I built this while studying Object-Oriented Programming to put what I
+          was learning into practice.
+        </p>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">OOP</span>
+        </div>
+        <a href="https://github.com/SujoyBehera" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>
+          This site! Built from scratch with plain HTML and CSS to practise web development
+          and have somewhere to share my work. No frameworks — just the basics.
+        </p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+        <a href="https://github.com/SujoyBehera" target="_blank">View on GitHub →</a>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <p class="section-label">Education</p>
+      <h2>Where I've studied</h2>
+
+      <div class="edu-item">
+        <p class="year">2025 – Present</p>
+        <h3>B.Tech in Computer Science — SRM IST</h3>
+        <p>CGPA: 8.41 after Semester 1</p>
+      </div>
+
+      <div class="edu-item">
+        <p class="year">Class XII</p>
+        <h3>Delhi Public School, RK Puram</h3>
+        <p>CBSE · 82.8%</p>
+      </div>
+
+      <div class="edu-item">
+        <p class="year">Class X</p>
+        <h3>Delhi Public School, RK Puram</h3>
+        <p>CBSE · 91.2%</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <p class="section-label">Contact</p>
+      <h2>Get in touch</h2>
+
+      <p>Feel free to reach out if you have an opportunity, want to collaborate, or just want to chat about code!</p>
+
+      <div class="contact-list">
+        <a href="mailto:beherasujoy@gmail.com" class="contact-item">
+          <span></span> beherasujoy@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/sujoy-behera-69971433b" target="_blank" class="contact-item">
+          <span></span> LinkedIn — sujoy-behera
+        </a>
+        <a href="https://github.com/SujoyBehera" target="_blank" class="contact-item">
+          <span></span> GitHub — SujoyBehera
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>made by sujoy · 2025</footer>
+
+</body>
+</html>
