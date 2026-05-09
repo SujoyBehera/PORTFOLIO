@@ -22,4 +22,4 @@ This project was created to practise frontend development and showcase my projec
 ## Live Demo
 
 ```txt
-https://yourusername.github.io/portfolio/
+https://sujoybehera.github.io/PORTFOLIO/
